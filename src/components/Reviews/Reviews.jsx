@@ -5,7 +5,6 @@ import { getMovieReviews } from 'services/API';
 function Reviews() {
   const [reviews, setReviews] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -15,7 +14,7 @@ function Reviews() {
         const result = await getMovieReviews(movieId);
         setReviews(result.results);
       } catch (error) {
-        setError(error.message);
+        console.log(error.message);
       } finally {
         setIsLoading(false);
       }

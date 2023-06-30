@@ -6,7 +6,6 @@ import { CastList } from './Cast.styled';
 function Cast() {
   const [cast, setCast] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -16,7 +15,7 @@ function Cast() {
         const result = await getMovieCast(movieId);
         setCast(result.cast);
       } catch (error) {
-        setError(error.message);
+        console.log(error.message);
       } finally {
         setIsLoading(false);
       }
