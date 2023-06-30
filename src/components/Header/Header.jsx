@@ -1,18 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { HeaderList } from './Header.styled';
 
 function Header() {
   return (
     <header>
       <nav>
-        <ul>
+        <HeaderList>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/movies">Movies</NavLink>
           </li>
-        </ul>
+        </HeaderList>
       </nav>
     </header>
   );
