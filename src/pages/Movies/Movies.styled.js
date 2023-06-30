@@ -1,4 +1,3 @@
-import SearchForm from 'components/SearchForm/SearchForm';
 import styled from 'styled-components';
 
 export const SearchFormMovieList = styled.ul`
